@@ -32,6 +32,7 @@
 		<ChildObjects>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
 			<Template>СКД_КадровыеДанные</Template>
+			<Template>Макет</Template>
 		</ChildObjects>
 	</ExternalReport>
 </MetaDataObject>
