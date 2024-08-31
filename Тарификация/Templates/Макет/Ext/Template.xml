@@ -6007,7 +6007,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ВСЕГО Подразделение, в том числе:</v8:content>
+							<v8:content>ВСЕГО [Подразделение], в том числе:</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -6055,22 +6055,19 @@
 			<c>
 				<c>
 					<f>733</f>
+					<tl/>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>734</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>6</v8:content>
-						</v8:item>
-					</tl>
+					<parameter>КоличествоСтавок</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>735</f>
+					<tl/>
 				</c>
 			</c>
 			<c>
@@ -6273,22 +6270,19 @@
 			<c>
 				<c>
 					<f>766</f>
+					<tl/>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>767</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>4</v8:content>
-						</v8:item>
-					</tl>
+					<parameter>КоличествоСтавок</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>768</f>
+					<tl/>
 				</c>
 			</c>
 			<c>
@@ -22911,6 +22905,7 @@
 		<patternColor>#FFFFFF</patternColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Wrap</textPlacement>
+		<fillType>Template</fillType>
 		<hidden>false</hidden>
 	</format>
 	<format>
@@ -22995,6 +22990,7 @@
 		<patternColor>#FFFFFF</patternColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
+		<fillType>Parameter</fillType>
 		<hidden>false</hidden>
 	</format>
 	<format>
@@ -23362,6 +23358,7 @@
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<textPlacement>Auto</textPlacement>
+		<fillType>Parameter</fillType>
 		<hidden>false</hidden>
 	</format>
 	<format>

@@ -1124,6 +1124,17 @@
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоСтавок</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Размер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Значение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
@@ -1166,6 +1177,10 @@
 					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
 				</dcscor:item>
@@ -1190,11 +1205,33 @@
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
-				<dcsset:item xsi:type="dcsset:StructureItemTable">
-					<dcsset:column>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
 						<dcsset:groupItems>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Организация</dcsset:field>
+								<dcsset:field>Должность</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сотрудник</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -1206,82 +1243,11 @@
 						</dcsset:order>
 						<dcsset:selection>
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>КоличествоСтавок</dcsset:field>
-							</dcsset:item>
 						</dcsset:selection>
-					</dcsset:column>
-					<dcsset:column>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Начисление</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>Значение</dcsset:field>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>Размер</dcsset:field>
-							</dcsset:item>
-						</dcsset:selection>
-					</dcsset:column>
-					<dcsset:row>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Подразделение</dcsset:field>
-								<dcsset:groupType>Hierarchy</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-						<dcsset:item>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
 							<dcsset:groupItems>
 								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>НомерСтроки</dcsset:field>
-									<dcsset:groupType>Items</dcsset:groupType>
-									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-								</dcsset:item>
-								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>ДокументОснование</dcsset:field>
-									<dcsset:groupType>Items</dcsset:groupType>
-									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-								</dcsset:item>
-								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>Должность</dcsset:field>
-									<dcsset:groupType>Items</dcsset:groupType>
-									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-								</dcsset:item>
-								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>ВидЗанятости</dcsset:field>
-									<dcsset:groupType>Items</dcsset:groupType>
-									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-								</dcsset:item>
-								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>Сотрудник</dcsset:field>
+									<dcsset:field>Начисление</dcsset:field>
 									<dcsset:groupType>Items</dcsset:groupType>
 									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -1293,23 +1259,9 @@
 							</dcsset:order>
 							<dcsset:selection>
 								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-								<dcsset:item xsi:type="dcsset:SelectedItemField">
-									<dcsset:use>false</dcsset:use>
-									<dcsset:field>ДокументОснование</dcsset:field>
-								</dcsset:item>
-								<dcsset:item xsi:type="dcsset:SelectedItemField">
-									<dcsset:use>false</dcsset:use>
-									<dcsset:field>НомерСтроки</dcsset:field>
-								</dcsset:item>
 							</dcsset:selection>
 						</dcsset:item>
-					</dcsset:row>
-					<dcsset:outputParameters>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
-							<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
-						</dcscor:item>
-					</dcsset:outputParameters>
+					</dcsset:item>
 				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>
