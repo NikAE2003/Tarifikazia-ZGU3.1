@@ -5541,6 +5541,7 @@
 			<c>
 				<c>
 					<f>666</f>
+					<tl/>
 				</c>
 			</c>
 			<c>
@@ -5769,7 +5770,7 @@
 			<c>
 				<c>
 					<f>701</f>
-					<parameter>Сотрудник</parameter>
+					<parameter>СотрудникПредставление</parameter>
 				</c>
 			</c>
 			<c>
@@ -6188,12 +6189,7 @@
 			<c>
 				<c>
 					<f>756</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>104422,92 </v8:content>
-						</v8:item>
-					</tl>
+					<parameter>ИтогоСПустыннойМестностью</parameter>
 				</c>
 			</c>
 			<c>
@@ -6403,12 +6399,7 @@
 			<c>
 				<c>
 					<f>789</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>76113,4</v8:content>
-						</v8:item>
-					</tl>
+					<parameter>ИтогоСПустыннойМестностью</parameter>
 				</c>
 			</c>
 			<c>
@@ -15750,7 +15741,6 @@
 		<width>131</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -16047,7 +16037,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -16373,7 +16362,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -16709,7 +16697,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -16945,7 +16932,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -17234,7 +17220,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -17534,7 +17519,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -17870,7 +17854,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -18247,7 +18230,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -18592,7 +18574,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -18891,7 +18872,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -19227,7 +19207,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -19544,7 +19523,6 @@
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#92D04F</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -19885,7 +19863,6 @@
 		<width>86</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#FFFFFF</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -21552,7 +21529,6 @@
 		<width>86</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<backColor>#FFFFFF</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Wrap</textPlacement>
 		<hidden>false</hidden>
@@ -21892,7 +21868,6 @@
 		<width>86</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<backColor>#FFFFFF</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -22537,7 +22512,6 @@
 		<width>86</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<backColor>#FFFFFF</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
@@ -22552,14 +22526,13 @@
 		<hidden>false</hidden>
 	</format>
 	<format>
-		<bottomBorder>1</bottomBorder>
 		<borderColor>#5A5A5A</borderColor>
 	</format>
 	<format>
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>31</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22571,7 +22544,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>193</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22583,7 +22556,7 @@
 		<font>16</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>155</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22595,7 +22568,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>53</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22608,7 +22581,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>29</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22619,7 +22592,7 @@
 		<font>1</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>35</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22630,7 +22603,7 @@
 		<font>1</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>29</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22642,7 +22615,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>53</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22655,7 +22628,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>31</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22666,7 +22639,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>56</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22679,7 +22652,7 @@
 		<font>1</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>63</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22692,7 +22665,7 @@
 		<font>3</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>77</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22706,7 +22679,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>65</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22720,7 +22693,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>49</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22734,7 +22707,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>66</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22748,7 +22721,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>69</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22762,7 +22735,7 @@
 		<font>1</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>24</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22773,7 +22746,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>80</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22784,7 +22757,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>288</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22795,7 +22768,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>125</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22806,7 +22779,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>46</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22820,7 +22793,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>77</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22834,7 +22807,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>41</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22848,7 +22821,7 @@
 		<font>3</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>86</width>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22863,7 +22836,7 @@
 		<font>1</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>83</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -22875,7 +22848,7 @@
 		<font>0</font>
 		<bottomBorder>1</bottomBorder>
 		<height>106</height>
-		<borderColor>#5A5A5A</borderColor>
+		<borderColor>#ADADAD</borderColor>
 		<width>90</width>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
@@ -23246,15 +23219,17 @@
 		<hidden>false</hidden>
 	</format>
 	<format>
-		<font>1</font>
-		<height>95</height>
+		<font>3</font>
+		<height>106</height>
+		<borderColor>#5A5A5A</borderColor>
 		<width>86</width>
-		<horizontalAlignment>Center</horizontalAlignment>
+		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<backColor>#C6D9F0</backColor>
 		<patternColor>#FFFFFF</patternColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
+		<fillType>Parameter</fillType>
 		<hidden>false</hidden>
 	</format>
 	<format>
@@ -23551,14 +23526,17 @@
 		<hidden>false</hidden>
 	</format>
 	<format>
-		<font>1</font>
-		<height>82</height>
+		<font>3</font>
+		<height>106</height>
+		<borderColor>#5A5A5A</borderColor>
 		<width>86</width>
-		<horizontalAlignment>Center</horizontalAlignment>
+		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
-		<backColor>#FFFFFF</backColor>
+		<backColor>#92D04F</backColor>
+		<patternColor>#FFFFFF</patternColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
+		<fillType>Parameter</fillType>
 		<hidden>false</hidden>
 	</format>
 	<format>
@@ -23828,7 +23806,6 @@
 		<width>86</width>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<verticalAlignment>Bottom</verticalAlignment>
-		<backColor>#FFFFFF</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
 		<hidden>false</hidden>
