@@ -1197,105 +1197,6 @@
 		<useRestriction>true</useRestriction>
 		<use>Always</use>
 	</parameter>
-	<parameter>
-		<name>Оклад</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Должностной оклад</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>Вредность</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Выплата за работу с вредными и (или) опасными условиями труда</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>Гостайна</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Надбавка за работу со сведениями, составляющими государственную тайну</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>Стаж</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>За стаж непрерывной работы</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>Выслуга</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>За выслугу лет</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>Квалификация</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>За квалификацию</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>УченаяСтепень</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>За наличие ученой степени</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>ПочетноеЗвание</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>За наличие  почетного звания или ведомственного почетного звания </v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>ПустыннаяМестность</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Повышение заработной платы за работу на территориях, отнесенных к пустынной и безводной местности</v8:content>
-			</v8:item>
-		</title>
-		<useRestriction>false</useRestriction>
-		<valueListAllowed>true</valueListAllowed>
-	</parameter>
 	<settingsVariant>
 		<dcsset:name>Тарификация</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -1359,6 +1260,69 @@
 					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>8a5f7a89-35de-44ad-b79f-01a2fa57f62f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Оклад</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>4439f340-e1f9-4a71-8646-80553ca62e0a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Вредность</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>21e01ef6-829c-40c6-91e9-ae2d07d24bd7</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Гостайна</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>51d28f2b-4783-420e-97af-7952744e822f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Стаж</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>759c6e03-0cd6-4d6a-8951-54ffdd14b79a</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Выслуга</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>91a945c5-6f85-490f-97a8-196d8df76a5c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Квалификация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c8726eab-3aa6-4790-8055-8055c71a3b53</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>УченаяСтепень</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>9f34d992-696a-4fdb-bf28-beadd9152328</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПочетноеЗвание</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>4d2e706b-bc8f-4b7f-8706-b86bd2f2e846</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПустыннаяМестность</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>ee3c38af-a488-46d5-a006-e5af73aaebfc</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:outputParameters>
