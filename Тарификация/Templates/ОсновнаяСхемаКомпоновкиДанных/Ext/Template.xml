@@ -1013,6 +1013,57 @@
 		ПО ВТСвободныеСтавки.ДолжностьПоШтатномуРасписанию = ВТПозицииСНомеромСтроки.ДолжностьПоШтатномуРасписанию</query>
 		</item>
 	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Специальности</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДанныеОСпециальности.ДействуетС</dataPath>
+			<field>ДействуетС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные о специальности.Действует С</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФизическоеЛицо</dataPath>
+			<field>ФизическоеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДанныеОСпециальности.Специальность</dataPath>
+			<field>Специальность</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СпециальностиФизическихЛиц.ФизическоеЛицо КАК ФизическоеЛицо,
+	МАКСИМУМ(СпециальностиФизическихЛиц.Период) КАК Период
+ПОМЕСТИТЬ ВТСпециальностиПериодыСреза
+ИЗ
+	РегистрСведений.СпециальностиФизическихЛиц КАК СпециальностиФизическихЛиц
+ГДЕ
+	СпециальностиФизическихЛиц.Период &lt;= &amp;Период
+
+СГРУППИРОВАТЬ ПО
+	СпециальностиФизическихЛиц.ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СпециальностиФизическихЛиц.Период КАК ДействуетС,
+	СпециальностиФизическихЛиц.ФизическоеЛицо КАК ФизическоеЛицо,
+	СпециальностиФизическихЛиц.Специальность КАК Специальность
+ИЗ
+	ВТСпециальностиПериодыСреза КАК ВТСпециальностиПериодыСреза
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СпециальностиФизическихЛиц КАК СпециальностиФизическихЛиц
+		ПО ВТСпециальностиПериодыСреза.ФизическоеЛицо = СпециальностиФизическихЛиц.ФизическоеЛицо
+			И ВТСпециальностиПериодыСреза.Период = СпециальностиФизическихЛиц.Период</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>Тарификация</sourceDataSet>
+		<destinationDataSet>Специальности</destinationDataSet>
+		<sourceExpression>ФизическоеЛицо</sourceExpression>
+		<destinationExpression>ФизическоеЛицо</destinationExpression>
+	</dataSetLink>
 	<totalField>
 		<dataPath>КоличествоСтавок</dataPath>
 		<expression>Сумма(ВычислитьВыражениеСГруппировкойМассив("Максимум(Выбор   
@@ -1406,6 +1457,20 @@
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
 								<dcsset:field>ФизическоеЛицо</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ДанныеОСпециальности.Специальность</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ДанныеОСпециальности.ДействуетС</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
