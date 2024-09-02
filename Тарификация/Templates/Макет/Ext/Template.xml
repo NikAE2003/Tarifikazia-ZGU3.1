@@ -5782,7 +5782,7 @@
 			<c>
 				<c>
 					<f>703</f>
-					<tl/>
+					<parameter>ОкладПоказатель</parameter>
 				</c>
 			</c>
 			<c>
@@ -21907,6 +21907,7 @@
 		<textPlacement>Auto</textPlacement>
 		<fillType>Parameter</fillType>
 		<hidden>false</hidden>
+		<autoIndent>4</autoIndent>
 	</format>
 	<format>
 		<font>17</font>
@@ -22575,6 +22576,7 @@
 		<backColor>#FFBF00</backColor>
 		<pattern>Solid</pattern>
 		<textPlacement>Auto</textPlacement>
+		<fillType>Parameter</fillType>
 		<hidden>false</hidden>
 	</format>
 	<format>
@@ -22880,6 +22882,7 @@
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Template</fillType>
 		<hidden>false</hidden>
+		<autoIndent>3</autoIndent>
 	</format>
 	<format>
 		<font>1</font>
