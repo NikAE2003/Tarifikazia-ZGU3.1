@@ -1014,7 +1014,7 @@
 		</item>
 	</dataSet>
 	<dataSet xsi:type="DataSetQuery">
-		<name>Специальности</name>
+		<name>ДанныеФизлиц</name>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДанныеОСпециальности.ДействуетС</dataPath>
 			<field>ДействуетС</field>
@@ -1032,6 +1032,14 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДанныеОСпециальности.Специальность</dataPath>
 			<field>Специальность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Награда</dataPath>
+			<field>Награда</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УченаяСтепень</dataPath>
+			<field>УченаяСтепень</field>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
@@ -1052,15 +1060,103 @@
 	СпециальностиФизическихЛиц.Период КАК ДействуетС,
 	СпециальностиФизическихЛиц.ФизическоеЛицо КАК ФизическоеЛицо,
 	СпециальностиФизическихЛиц.Специальность КАК Специальность
+ПОМЕСТИТЬ ВТСпециальности
 ИЗ
 	ВТСпециальностиПериодыСреза КАК ВТСпециальностиПериодыСреза
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СпециальностиФизическихЛиц КАК СпециальностиФизическихЛиц
 		ПО ВТСпециальностиПериодыСреза.ФизическоеЛицо = СпециальностиФизическихЛиц.ФизическоеЛицо
-			И ВТСпециальностиПериодыСреза.Период = СпециальностиФизическихЛиц.Период</query>
+			И ВТСпециальностиПериодыСреза.Период = СпециальностиФизическихЛиц.Период
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УченыеСтепениФизическихЛиц.ФизическоеЛицо КАК ФизическоеЛицо,
+	МАКСИМУМ(УченыеСтепениФизическихЛиц.НомерПоПорядку) КАК НомерПоПорядку
+ПОМЕСТИТЬ ВТУченыеСтепениПоследниеЗаписи
+ИЗ
+	РегистрСведений.УченыеСтепениФизическихЛиц КАК УченыеСтепениФизическихЛиц
+
+СГРУППИРОВАТЬ ПО
+	УченыеСтепениФизическихЛиц.ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УченыеСтепениФизическихЛиц.ФизическоеЛицо КАК ФизическоеЛицо,
+	УченыеСтепениФизическихЛиц.УченаяСтепень КАК УченаяСтепень
+ПОМЕСТИТЬ ВТУченыеСтепени
+ИЗ
+	ВТУченыеСтепениПоследниеЗаписи КАК ВТУченыеСтепениПоследниеЗаписи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.УченыеСтепениФизическихЛиц КАК УченыеСтепениФизическихЛиц
+		ПО ВТУченыеСтепениПоследниеЗаписи.ФизическоеЛицо = УченыеСтепениФизическихЛиц.ФизическоеЛицо
+			И ВТУченыеСтепениПоследниеЗаписи.НомерПоПорядку = УченыеСтепениФизическихЛиц.НомерПоПорядку
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НаградыФизическихЛиц.ФизическоеЛицо КАК ФизическоеЛицо,
+	МАКСИМУМ(НаградыФизическихЛиц.НомерПоПорядку) КАК НомерПоПорядку
+ПОМЕСТИТЬ ВТНаградыПоследниеЗаписи
+ИЗ
+	РегистрСведений.НаградыФизическихЛиц КАК НаградыФизическихЛиц
+
+СГРУППИРОВАТЬ ПО
+	НаградыФизическихЛиц.ФизическоеЛицо
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НаградыФизическихЛиц.ФизическоеЛицо КАК ФизическоеЛицо,
+	НаградыФизическихЛиц.Награда КАК Награда
+ПОМЕСТИТЬ ВТНаграды
+ИЗ
+	ВТНаградыПоследниеЗаписи КАК ВТНаградыПоследниеЗаписи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.НаградыФизическихЛиц КАК НаградыФизическихЛиц
+		ПО ВТНаградыПоследниеЗаписи.ФизическоеЛицо = НаградыФизическихЛиц.ФизическоеЛицо
+			И ВТНаградыПоследниеЗаписи.НомерПоПорядку = НаградыФизическихЛиц.НомерПоПорядку
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТСпециальности.ФизическоеЛицо КАК ФизическоеЛицо
+ПОМЕСТИТЬ ВТВсеФизЛица
+ИЗ
+	ВТСпециальности КАК ВТСпециальности
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТУченыеСтепени.ФизическоеЛицо
+ИЗ
+	ВТУченыеСтепени КАК ВТУченыеСтепени
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТНаграды.ФизическоеЛицо
+ИЗ
+	ВТНаграды КАК ВТНаграды
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТВсеФизЛица.ФизическоеЛицо КАК ФизическоеЛицо,
+	ВТСпециальности.ДействуетС КАК ДействуетС,
+	ВТСпециальности.Специальность КАК Специальность,
+	ВТУченыеСтепени.УченаяСтепень КАК УченаяСтепень,
+	ВТНаграды.Награда КАК Награда
+ИЗ
+	ВТВсеФизЛица КАК ВТВсеФизЛица
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТУченыеСтепени КАК ВТУченыеСтепени
+		ПО ВТВсеФизЛица.ФизическоеЛицо = ВТУченыеСтепени.ФизическоеЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТСпециальности КАК ВТСпециальности
+		ПО ВТВсеФизЛица.ФизическоеЛицо = ВТСпециальности.ФизическоеЛицо
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТНаграды КАК ВТНаграды
+		ПО ВТВсеФизЛица.ФизическоеЛицо = ВТНаграды.ФизическоеЛицо</query>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>Тарификация</sourceDataSet>
-		<destinationDataSet>Специальности</destinationDataSet>
+		<destinationDataSet>ДанныеФизлиц</destinationDataSet>
 		<sourceExpression>ФизическоеЛицо</sourceExpression>
 		<destinationExpression>ФизическоеЛицо</destinationExpression>
 	</dataSetLink>
@@ -1261,69 +1357,6 @@
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>8a5f7a89-35de-44ad-b79f-01a2fa57f62f</dcsset:userSettingID>
 				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Оклад</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>4439f340-e1f9-4a71-8646-80553ca62e0a</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Вредность</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>21e01ef6-829c-40c6-91e9-ae2d07d24bd7</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Гостайна</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>51d28f2b-4783-420e-97af-7952744e822f</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Стаж</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>759c6e03-0cd6-4d6a-8951-54ffdd14b79a</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Выслуга</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>91a945c5-6f85-490f-97a8-196d8df76a5c</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Квалификация</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>c8726eab-3aa6-4790-8055-8055c71a3b53</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>УченаяСтепень</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>9f34d992-696a-4fdb-bf28-beadd9152328</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ПочетноеЗвание</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>4d2e706b-bc8f-4b7f-8706-b86bd2f2e846</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>ПустыннаяМестность</dcscor:parameter>
-					<dcscor:value xsi:nil="true"/>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>ee3c38af-a488-46d5-a006-e5af73aaebfc</dcsset:userSettingID>
-				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -1435,6 +1468,20 @@
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
 								<dcsset:field>ДанныеОСпециальности.ДействуетС</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>УченаяСтепень</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Награда</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
